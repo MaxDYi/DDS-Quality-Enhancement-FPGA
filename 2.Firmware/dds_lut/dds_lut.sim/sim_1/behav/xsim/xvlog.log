@@ -1,0 +1,12 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SineCalculate/2.Firmware/dds_lut/dds_lut.gen/sources_1/ip/rom_sin_1_4/sim/rom_sin_1_4.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rom_sin_1_4
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SineCalculate/2.Firmware/dds_lut/dds_lut.gen/sources_1/ip/clk_pll/clk_pll_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_pll_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SineCalculate/2.Firmware/dds_lut/dds_lut.gen/sources_1/ip/clk_pll/clk_pll.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_pll
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SineCalculate/2.Firmware/dds_lut/dds_lut.srcs/sources_1/new/dds_lut.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dds_lut
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SineCalculate/2.Firmware/dds_lut/dds_lut.srcs/sources_1/new/dds_lut_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dds_lut_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/SineCalculate/2.Firmware/dds_lut/dds_lut.srcs/sim_1/new/dds_lut_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dds_lut_tb

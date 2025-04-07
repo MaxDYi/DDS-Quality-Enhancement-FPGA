@@ -1,0 +1,2 @@
+rom_sin_1_4.v,verilog,xil_defaultlib,../../../../SineCalculate.gen/sources_1/ip/rom_sin_1_4/sim/rom_sin_1_4.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

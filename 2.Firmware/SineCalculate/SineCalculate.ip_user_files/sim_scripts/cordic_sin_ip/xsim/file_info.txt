@@ -1,0 +1,2 @@
+cordic_sin_ip.vhd,vhdl,xil_defaultlib,../../../../SineCalculate.gen/sources_1/ip/cordic_sin_ip/sim/cordic_sin_ip.vhd,
+glbl.v,Verilog,xil_defaultlib,glbl.v

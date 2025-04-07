@@ -1,0 +1,2 @@
+mult_u18xu18.vhd,vhdl,xil_defaultlib,../../../../SineCalculate.gen/sources_1/ip/mult_u18xu18/sim/mult_u18xu18.vhd,
+glbl.v,Verilog,xil_defaultlib,glbl.v

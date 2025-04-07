@@ -1,0 +1,11 @@
+Time resolution is 1 ps
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module sine_top_tb.sine_top_inst.dds_lut_1_4_inst.rom_sin_1_4_inst_sin.inst.native_mem_module.blk_mem_gen_v8_4_8_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Simulation start
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module sine_top_tb.sine_top_inst.dds_lut_1_4_inst.rom_sin_1_4_inst_sin.inst.native_mem_module.blk_mem_gen_v8_4_8_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Simulation start
+$stop called at time : 1020 ns : File "E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.srcs/sim_1/new/sine_top_tb.v" Line 83
+INFO: xsimkernel Simulation Memory Usage: 78988 KB (Peak: 78988 KB), Simulation CPU Usage: 129827 ms

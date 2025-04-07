@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Sun Nov 10 14:49:35 2024
+# Process ID: 1552
+# Current directory: E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.runs/mult_64x64_synth_1
+# Command line: vivado.exe -log mult_64x64.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source mult_64x64.tcl
+# Log file: E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.runs/mult_64x64_synth_1/mult_64x64.vds
+# Journal file: E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.runs/mult_64x64_synth_1\vivado.jou
+# Running On        :Laptop-OMEN
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :22631
+# Processor Detail  :Intel(R) Core(TM) i7-8750H CPU @ 2.20GHz
+# CPU Frequency     :2208 MHz
+# CPU Physical cores:6
+# CPU Logical cores :12
+# Host memory       :34230 MB
+# Swap memory       :2147 MB
+# Total Virtual     :36377 MB
+# Available Virtual :15772 MB
+#-----------------------------------------------------------
+source mult_64x64.tcl -notrace

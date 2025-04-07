@@ -1,0 +1,30 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../SineCalculate.ip_user_files/ipstatic" \
+"../../../../SineCalculate.gen/sources_1/ip/rom_sin/rom_sin_sim_netlist.v" \
+"../../../../SineCalculate.gen/sources_1/ip/clk_pll/clk_pll_clk_wiz.v" \
+"../../../../SineCalculate.gen/sources_1/ip/clk_pll/clk_pll.v" \
+"../../../../SineCalculate.gen/sources_1/ip/mult_64x64/mult_64x64_sim_netlist.v" \
+"../../../../SineCalculate.gen/sources_1/ip/rom_sin_1_4/sim/rom_sin_1_4.v" \
+"../../../../SineCalculate.srcs/sources_1/new/sine_top.v" \
+"../../../../SineCalculate.srcs/sources_1/new/dds_taylor.v" \
+"../../../../SineCalculate.srcs/sources_1/new/sin_cos_taylor_pipeline.v" \
+"../../../../SineCalculate.srcs/sources_1/new/dds_lut/dds_lut.v" \
+"../../../../SineCalculate.srcs/sources_1/new/mult/mult_u18xu72.v" \
+"../../../../SineCalculate.srcs/sources_1/new/dds_cordic/sine_cordic.v" \
+"../../../../SineCalculate.srcs/sources_1/new/mult/mult_u18xu36.v" \
+"../../../../SineCalculate.srcs/sources_1/new/mult/mult_192x64.v" \
+"../../../../SineCalculate.srcs/sources_1/new/mult/mult_u18xu54.v" \
+"../../../../SineCalculate.srcs/sources_1/new/mult/mult_u192xu64.v" \
+"../../../../SineCalculate.srcs/sources_1/new/dds_cordic/dds_cordic.v" \
+"../../../../SineCalculate.srcs/sources_1/new/mult/mult_u18xu108.v" \
+"../../../../SineCalculate.srcs/sources_1/new/mult/mult_u18xu90.v" \
+"../../../../SineCalculate.srcs/sources_1/new/mult/mult_u18xu126.v" \
+"../../../../SineCalculate.srcs/sources_1/new/delay_signal.v" \
+"../../../../SineCalculate.srcs/sources_1/new/dds_lut_1_4.v" \
+"../../../../SineCalculate.srcs/sim_1/new/sine_top_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

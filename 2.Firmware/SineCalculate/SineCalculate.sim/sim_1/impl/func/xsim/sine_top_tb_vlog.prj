@@ -1,0 +1,7 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../SineCalculate.ip_user_files/ipstatic" \
+"sine_top_tb_func_impl.v" \
+"../../../../../SineCalculate.srcs/sim_1/new/sine_top_tb.v" \
+
+# Do not sort compile order
+nosort

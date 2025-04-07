@@ -1,0 +1,1197 @@
+
+*** Running vivado
+    with args -log sine_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source sine_top.tcl
+
+
+
+****** Vivado v2024.1 (64-bit)
+  **** SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+  **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+  **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+  **** Start of session at: Mon Dec  2 21:50:42 2024
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source sine_top.tcl -notrace
+create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 630.766 ; gain = 200.496
+Command: read_checkpoint -auto_incremental -incremental E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.srcs/utils_1/imports/synth_1/sine_top.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.srcs/utils_1/imports/synth_1/sine_top.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top sine_top -part xc7k325tffg900-2 -flatten_hierarchy none -directive PerformanceOptimized -global_retiming on -fsm_extraction one_hot -keep_equivalent_registers -resource_sharing off -no_lc -shreg_min_size 5
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k325t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k325t'
+INFO: [Device 21-403] Loading part xc7k325tffg900-2
+INFO: [Device 21-9227] Part: xc7k325tffg900-2 does not have CEAM library.
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 5284
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1554.648 ; gain = 449.430
+---------------------------------------------------------------------------------
+INFO: [Synth 8-11241] undeclared symbol 'sin_cos_flag_delay', assumed default net type 'wire' [E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.srcs/sources_1/new/dds_taylor.v:144]
+WARNING: [Synth 8-6901] identifier 'PI_1_2_VALUE' is used before its declaration [E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.srcs/sources_1/new/dds_taylor.v:65]
+WARNING: [Synth 8-6901] identifier 'SIN_COS_MID' is used before its declaration [E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.srcs/sources_1/new/dds_taylor.v:66]
+WARNING: [Synth 8-6901] identifier 'PI_2_VALUE' is used before its declaration [E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.srcs/sources_1/new/dds_taylor.v:71]
+WARNING: [Synth 8-6901] identifier 'PI_2_VALUE' is used before its declaration [E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.srcs/sources_1/new/dds_taylor.v:71]
+WARNING: [Synth 8-10714] extra semicolon is not allowed here in this dialect; use SystemVerilog mode instead [E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.srcs/sources_1/new/dds_cordic/dds_cordic.v:46]
+INFO: [Synth 8-6157] synthesizing module 'sine_top' [E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.srcs/sources_1/new/sine_top.v:23]
+INFO: [Synth 8-6157] synthesizing module 'clk_pll' [E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.runs/synth_1/.Xil/Vivado-30120-Desktop-NUC/realtime/clk_pll_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'clk_pll' (0#1) [E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.runs/synth_1/.Xil/Vivado-30120-Desktop-NUC/realtime/clk_pll_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'dds_taylor' [E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.srcs/sources_1/new/dds_taylor.v:23]
+INFO: [Synth 8-6157] synthesizing module 'sin_cos_taylor_pipeline' [E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.srcs/sources_1/new/sin_cos_taylor_pipeline.v:23]
+INFO: [Synth 8-638] synthesizing module 'mult_u18xu18' [e:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.gen/sources_1/ip/mult_u18xu18/synth/mult_u18xu18.vhd:69]
+WARNING: [Synth 8-5640] Port 'zero_detect' is missing in component declaration [e:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.gen/sources_1/ip/mult_u18xu18/synth/mult_u18xu18.vhd:72]
+WARNING: [Synth 8-5640] Port 'pcasc' is missing in component declaration [e:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.gen/sources_1/ip/mult_u18xu18/synth/mult_u18xu18.vhd:72]
+WARNING: [Synth 8-5640] Port 'pcasc_ext' is missing in component declaration [e:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.gen/sources_1/ip/mult_u18xu18/synth/mult_u18xu18.vhd:72]
+	Parameter C_VERBOSITY bound to: 0 - type: integer 
+	Parameter C_MODEL_TYPE bound to: 0 - type: integer 
+	Parameter C_OPTIMIZE_GOAL bound to: 1 - type: integer 
+	Parameter C_XDEVICEFAMILY bound to: kintex7 - type: string 
+	Parameter C_HAS_CE bound to: 0 - type: integer 
+	Parameter C_HAS_SCLR bound to: 1 - type: integer 
+	Parameter C_LATENCY bound to: 1 - type: integer 
+	Parameter C_A_WIDTH bound to: 18 - type: integer 
+	Parameter C_A_TYPE bound to: 1 - type: integer 
+	Parameter C_B_WIDTH bound to: 18 - type: integer 
+	Parameter C_B_TYPE bound to: 1 - type: integer 
+	Parameter C_OUT_HIGH bound to: 35 - type: integer 
+	Parameter C_OUT_LOW bound to: 0 - type: integer 
+	Parameter C_MULT_TYPE bound to: 1 - type: integer 
+	Parameter C_CE_OVERRIDES_SCLR bound to: 0 - type: integer 
+	Parameter C_CCM_IMP bound to: 0 - type: integer 
+	Parameter C_B_VALUE bound to: 10000001 - type: string 
+	Parameter C_HAS_ZERO_DETECT bound to: 0 - type: integer 
+	Parameter C_ROUND_OUTPUT bound to: 0 - type: integer 
+	Parameter C_ROUND_PT bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'mult_gen_v12_0_21' declared at 'e:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.gen/sources_1/ip/mult_u64xu64/hdl/mult_gen_v12_0_vh_rfs.vhd:21527' bound to instance 'U0' of component 'mult_gen_v12_0_21' [e:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.gen/sources_1/ip/mult_u18xu18/synth/mult_u18xu18.vhd:123]
+INFO: [Synth 8-256] done synthesizing module 'mult_u18xu18' (0#1) [e:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.gen/sources_1/ip/mult_u18xu18/synth/mult_u18xu18.vhd:69]
+INFO: [Synth 8-6157] synthesizing module 'mult_u18xu54' [E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.srcs/sources_1/new/mult/mult_u18xu54.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'mult_u18xu54' (0#1) [E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.srcs/sources_1/new/mult/mult_u18xu54.v:23]
+INFO: [Synth 8-6157] synthesizing module 'mult_u18xu90' [E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.srcs/sources_1/new/mult/mult_u18xu90.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'mult_u18xu90' (0#1) [E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.srcs/sources_1/new/mult/mult_u18xu90.v:23]
+INFO: [Synth 8-6157] synthesizing module 'mult_u18xu126' [E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.srcs/sources_1/new/mult/mult_u18xu126.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'mult_u18xu126' (0#1) [E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.srcs/sources_1/new/mult/mult_u18xu126.v:23]
+INFO: [Synth 8-6157] synthesizing module 'mult_u18xu36' [E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.srcs/sources_1/new/mult/mult_u18xu36.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'mult_u18xu36' (0#1) [E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.srcs/sources_1/new/mult/mult_u18xu36.v:23]
+INFO: [Synth 8-6157] synthesizing module 'mult_u18xu72' [E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.srcs/sources_1/new/mult/mult_u18xu72.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'mult_u18xu72' (0#1) [E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.srcs/sources_1/new/mult/mult_u18xu72.v:23]
+INFO: [Synth 8-6157] synthesizing module 'mult_u18xu108' [E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.srcs/sources_1/new/mult/mult_u18xu108.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'mult_u18xu108' (0#1) [E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.srcs/sources_1/new/mult/mult_u18xu108.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'sin_cos_taylor_pipeline' (0#1) [E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.srcs/sources_1/new/sin_cos_taylor_pipeline.v:23]
+WARNING: [Synth 8-689] width (32) of port connection 'phase' does not match port width (18) of module 'sin_cos_taylor_pipeline' [E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.srcs/sources_1/new/dds_taylor.v:116]
+WARNING: [Synth 8-689] width (32) of port connection 'phase' does not match port width (18) of module 'sin_cos_taylor_pipeline' [E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.srcs/sources_1/new/dds_taylor.v:124]
+INFO: [Synth 8-6157] synthesizing module 'delay_signal' [E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.srcs/sources_1/new/delay_signal.v:23]
+	Parameter N bound to: 7 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'delay_signal' (0#1) [E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.srcs/sources_1/new/delay_signal.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'dds_taylor' (0#1) [E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.srcs/sources_1/new/dds_taylor.v:23]
+INFO: [Synth 8-6157] synthesizing module 'dds_cordic' [E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.srcs/sources_1/new/dds_cordic/dds_cordic.v:23]
+INFO: [Synth 8-6157] synthesizing module 'sine_cordic' [E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.srcs/sources_1/new/dds_cordic/sine_cordic.v:23]
+INFO: [Synth 8-6157] synthesizing module 'cordic_sin_ip' [E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.runs/synth_1/.Xil/Vivado-30120-Desktop-NUC/realtime/cordic_sin_ip_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'cordic_sin_ip' (0#1) [E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.runs/synth_1/.Xil/Vivado-30120-Desktop-NUC/realtime/cordic_sin_ip_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'sine_cordic' (0#1) [E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.srcs/sources_1/new/dds_cordic/sine_cordic.v:23]
+INFO: [Synth 8-6157] synthesizing module 'delay_signal__parameterized0' [E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.srcs/sources_1/new/delay_signal.v:23]
+	Parameter N bound to: 21 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'delay_signal__parameterized0' (0#1) [E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.srcs/sources_1/new/delay_signal.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'dds_cordic' (0#1) [E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.srcs/sources_1/new/dds_cordic/dds_cordic.v:23]
+INFO: [Synth 8-6157] synthesizing module 'dds_lut' [E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.srcs/sources_1/new/dds_lut/dds_lut.v:23]
+INFO: [Synth 8-6157] synthesizing module 'rom_sin' [E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.runs/synth_1/.Xil/Vivado-30120-Desktop-NUC/realtime/rom_sin_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'rom_sin' (0#1) [E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.runs/synth_1/.Xil/Vivado-30120-Desktop-NUC/realtime/rom_sin_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'dds_lut' (0#1) [E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.srcs/sources_1/new/dds_lut/dds_lut.v:23]
+INFO: [Synth 8-6157] synthesizing module 'dds_lut_1_4' [E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.srcs/sources_1/new/dds_lut_1_4.v:23]
+INFO: [Synth 8-6157] synthesizing module 'rom_sin_1_4' [E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.runs/synth_1/.Xil/Vivado-30120-Desktop-NUC/realtime/rom_sin_1_4_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'rom_sin_1_4' (0#1) [E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.runs/synth_1/.Xil/Vivado-30120-Desktop-NUC/realtime/rom_sin_1_4_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'dds_lut_1_4' (0#1) [E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.srcs/sources_1/new/dds_lut_1_4.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'sine_top' (0#1) [E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.srcs/sources_1/new/sine_top.v:23]
+WARNING: [Synth 8-7137] Register phase_input_reg in module dds_cordic has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.srcs/sources_1/new/dds_cordic/dds_cordic.v:51]
+WARNING: [Synth 8-7137] Register dout_symbol_reg in module dds_cordic has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.srcs/sources_1/new/dds_cordic/dds_cordic.v:57]
+WARNING: [Synth 8-6014] Unused sequential element dds_reg was removed.  [E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.srcs/sources_1/new/sine_top.v:164]
+WARNING: [Synth 8-7129] Port CLK in module delay_line__parameterized4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module delay_line__parameterized4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module delay_line__parameterized4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module delay_line__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module delay_line__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module delay_line__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module delay_line__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module delay_line__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module delay_line__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module delay_line__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module delay_line__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module delay_line__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module delay_line__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module delay_line is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module delay_line is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module delay_line is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[24] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[23] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[22] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[21] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[20] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[19] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[18] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[17] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[16] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[15] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[14] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[13] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[12] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[11] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[10] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[9] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[8] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[7] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[6] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[5] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[4] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[3] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[2] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[1] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[0] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CARRY_IN in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module mult_gen_v12_0_21_viv is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1770.680 ; gain = 665.461
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1770.680 ; gain = 665.461
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1770.680 ; gain = 665.461
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.444 . Memory (MB): peak = 1770.680 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 200 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [e:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.gen/sources_1/ip/cordic_sin_ip/cordic_sin_ip/cordic_sin_ip_in_context.xdc] for cell 'dds_cordic_inst/sine_cordic_inst/cordic_sin_ip_inst'
+Finished Parsing XDC File [e:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.gen/sources_1/ip/cordic_sin_ip/cordic_sin_ip/cordic_sin_ip_in_context.xdc] for cell 'dds_cordic_inst/sine_cordic_inst/cordic_sin_ip_inst'
+Parsing XDC File [e:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.gen/sources_1/ip/rom_sin/rom_sin/rom_sin_in_context.xdc] for cell 'dds_lut_inst/rom_sin_inst_sin'
+Finished Parsing XDC File [e:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.gen/sources_1/ip/rom_sin/rom_sin/rom_sin_in_context.xdc] for cell 'dds_lut_inst/rom_sin_inst_sin'
+Parsing XDC File [e:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.gen/sources_1/ip/clk_pll/clk_pll/clk_pll_in_context.xdc] for cell 'clk_pll_inst'
+Finished Parsing XDC File [e:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.gen/sources_1/ip/clk_pll/clk_pll/clk_pll_in_context.xdc] for cell 'clk_pll_inst'
+Parsing XDC File [e:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.gen/sources_1/ip/rom_sin_1_4/rom_sin_1_4/rom_sin_1_4_in_context.xdc] for cell 'dds_lut_1_4_inst/rom_sin_1_4_inst_sin'
+Finished Parsing XDC File [e:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.gen/sources_1/ip/rom_sin_1_4/rom_sin_1_4/rom_sin_1_4_in_context.xdc] for cell 'dds_lut_1_4_inst/rom_sin_1_4_inst_sin'
+Parsing XDC File [E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.srcs/constrs_1/new/system.xdc]
+Finished Parsing XDC File [E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.srcs/constrs_1/new/system.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.srcs/constrs_1/new/system.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/sine_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/sine_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1867.574 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.065 . Memory (MB): peak = 1867.574 ; gain = 0.000
+WARNING: [Timing 38-316] Clock period '1000.000' specified during out-of-context synthesis of instance 'dds_cordic_inst/sine_cordic_inst/cordic_sin_ip_inst' at clock pin 'aclk' is different from the actual clock period '10.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'dds_lut_1_4_inst/rom_sin_1_4_inst_sin' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'dds_lut_inst/rom_sin_inst_sin' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1868.160 ; gain = 762.941
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k325tffg900-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1868.160 ; gain = 762.941
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for sysclk_n. (constraint file  e:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.gen/sources_1/ip/clk_pll/clk_pll/clk_pll_in_context.xdc, line 8).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for sysclk_n. (constraint file  e:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.gen/sources_1/ip/clk_pll/clk_pll/clk_pll_in_context.xdc, line 9).
+Applied set_property IO_BUFFER_TYPE = NONE for sysclk_p. (constraint file  e:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.gen/sources_1/ip/clk_pll/clk_pll/clk_pll_in_context.xdc, line 10).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for sysclk_p. (constraint file  e:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.gen/sources_1/ip/clk_pll/clk_pll/clk_pll_in_context.xdc, line 11).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_1_inst/mult_u18xu54_sin_kx2/mult_u18xu18_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_1_inst/mult_u18xu90_sin_kx3/mult_u18xu18_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_1_inst/mult_u18xu126_sin_kx4/mult_u18xu18_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_1_inst/mult_u18xu36_cos_kx2/mult_u18xu18_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_1_inst/mult_u18xu72_cos_kx3/mult_u18xu18_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_1_inst/mult_u18xu108_cos_kx4/mult_u18xu18_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_1_inst/mult_u18xu36_x_3/mult_u18xu18_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_1_inst/mult_u18xu54_x_4/mult_u18xu18_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_1_inst/mult_u18xu72_x_5/mult_u18xu18_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_1_inst/mult_u18xu90_x_6/mult_u18xu18_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_1_inst/mult_u18xu108_x_7/mult_u18xu18_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_2_inst/mult_u18xu54_sin_kx2/mult_u18xu18_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_2_inst/mult_u18xu90_sin_kx3/mult_u18xu18_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_2_inst/mult_u18xu126_sin_kx4/mult_u18xu18_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_2_inst/mult_u18xu36_cos_kx2/mult_u18xu18_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_2_inst/mult_u18xu72_cos_kx3/mult_u18xu18_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_2_inst/mult_u18xu108_cos_kx4/mult_u18xu18_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_2_inst/mult_u18xu36_x_3/mult_u18xu18_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_2_inst/mult_u18xu54_x_4/mult_u18xu18_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_2_inst/mult_u18xu72_x_5/mult_u18xu18_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_2_inst/mult_u18xu90_x_6/mult_u18xu18_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_2_inst/mult_u18xu108_x_7/mult_u18xu18_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_1_inst/mult_u18xu54_sin_kx2/mult_u18xu18_2. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_1_inst/mult_u18xu90_sin_kx3/mult_u18xu18_2. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_1_inst/mult_u18xu126_sin_kx4/mult_u18xu18_2. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_1_inst/mult_u18xu36_cos_kx2/mult_u18xu18_2. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_1_inst/mult_u18xu72_cos_kx3/mult_u18xu18_2. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_1_inst/mult_u18xu108_cos_kx4/mult_u18xu18_2. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_1_inst/mult_u18xu36_x_3/mult_u18xu18_2. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_1_inst/mult_u18xu54_x_4/mult_u18xu18_2. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_1_inst/mult_u18xu72_x_5/mult_u18xu18_2. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_1_inst/mult_u18xu90_x_6/mult_u18xu18_2. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_1_inst/mult_u18xu108_x_7/mult_u18xu18_2. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_2_inst/mult_u18xu54_sin_kx2/mult_u18xu18_2. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_2_inst/mult_u18xu90_sin_kx3/mult_u18xu18_2. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_2_inst/mult_u18xu126_sin_kx4/mult_u18xu18_2. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_2_inst/mult_u18xu36_cos_kx2/mult_u18xu18_2. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_2_inst/mult_u18xu72_cos_kx3/mult_u18xu18_2. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_2_inst/mult_u18xu108_cos_kx4/mult_u18xu18_2. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_2_inst/mult_u18xu36_x_3/mult_u18xu18_2. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_2_inst/mult_u18xu54_x_4/mult_u18xu18_2. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_2_inst/mult_u18xu72_x_5/mult_u18xu18_2. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_2_inst/mult_u18xu90_x_6/mult_u18xu18_2. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_2_inst/mult_u18xu108_x_7/mult_u18xu18_2. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_1_inst/mult_u18xu54_sin_kx2/mult_u18xu18_3. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_1_inst/mult_u18xu90_sin_kx3/mult_u18xu18_3. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_1_inst/mult_u18xu126_sin_kx4/mult_u18xu18_3. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_1_inst/mult_u18xu72_cos_kx3/mult_u18xu18_3. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_1_inst/mult_u18xu108_cos_kx4/mult_u18xu18_3. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_1_inst/mult_u18xu54_x_4/mult_u18xu18_3. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_1_inst/mult_u18xu72_x_5/mult_u18xu18_3. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_1_inst/mult_u18xu90_x_6/mult_u18xu18_3. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_1_inst/mult_u18xu108_x_7/mult_u18xu18_3. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_2_inst/mult_u18xu54_sin_kx2/mult_u18xu18_3. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_2_inst/mult_u18xu90_sin_kx3/mult_u18xu18_3. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_2_inst/mult_u18xu126_sin_kx4/mult_u18xu18_3. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_2_inst/mult_u18xu72_cos_kx3/mult_u18xu18_3. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_2_inst/mult_u18xu108_cos_kx4/mult_u18xu18_3. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_2_inst/mult_u18xu54_x_4/mult_u18xu18_3. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_2_inst/mult_u18xu72_x_5/mult_u18xu18_3. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_2_inst/mult_u18xu90_x_6/mult_u18xu18_3. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_2_inst/mult_u18xu108_x_7/mult_u18xu18_3. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_1_inst/mult_u18xu90_sin_kx3/mult_u18xu18_4. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_1_inst/mult_u18xu126_sin_kx4/mult_u18xu18_4. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_1_inst/mult_u18xu72_cos_kx3/mult_u18xu18_4. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_1_inst/mult_u18xu108_cos_kx4/mult_u18xu18_4. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_1_inst/mult_u18xu72_x_5/mult_u18xu18_4. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_1_inst/mult_u18xu90_x_6/mult_u18xu18_4. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_1_inst/mult_u18xu108_x_7/mult_u18xu18_4. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_2_inst/mult_u18xu90_sin_kx3/mult_u18xu18_4. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_2_inst/mult_u18xu126_sin_kx4/mult_u18xu18_4. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_2_inst/mult_u18xu72_cos_kx3/mult_u18xu18_4. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_2_inst/mult_u18xu108_cos_kx4/mult_u18xu18_4. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_2_inst/mult_u18xu72_x_5/mult_u18xu18_4. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_2_inst/mult_u18xu90_x_6/mult_u18xu18_4. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_2_inst/mult_u18xu108_x_7/mult_u18xu18_4. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_1_inst/mult_u18xu90_sin_kx3/mult_u18xu18_5. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_1_inst/mult_u18xu126_sin_kx4/mult_u18xu18_5. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_1_inst/mult_u18xu108_cos_kx4/mult_u18xu18_5. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_1_inst/mult_u18xu90_x_6/mult_u18xu18_5. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_1_inst/mult_u18xu108_x_7/mult_u18xu18_5. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_2_inst/mult_u18xu90_sin_kx3/mult_u18xu18_5. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_2_inst/mult_u18xu126_sin_kx4/mult_u18xu18_5. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_2_inst/mult_u18xu108_cos_kx4/mult_u18xu18_5. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_2_inst/mult_u18xu90_x_6/mult_u18xu18_5. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_2_inst/mult_u18xu108_x_7/mult_u18xu18_5. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_1_inst/mult_u18xu126_sin_kx4/mult_u18xu18_6. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_1_inst/mult_u18xu108_cos_kx4/mult_u18xu18_6. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_1_inst/mult_u18xu108_x_7/mult_u18xu18_6. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_2_inst/mult_u18xu126_sin_kx4/mult_u18xu18_6. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_2_inst/mult_u18xu108_cos_kx4/mult_u18xu18_6. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_2_inst/mult_u18xu108_x_7/mult_u18xu18_6. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_1_inst/mult_u18xu126_sin_kx4/mult_u18xu18_7. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_2_inst/mult_u18xu126_sin_kx4/mult_u18xu18_7. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_1_inst/mult_u18xu18_cos_kx1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_2_inst/mult_u18xu18_cos_kx1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_1_inst/mult_u18xu18_sin_kx1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_2_inst/mult_u18xu18_sin_kx1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_1_inst/mult_u18xu18_x_2. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_taylor_inst/sin_cos_taylor_pipeline_2_inst/mult_u18xu18_x_2. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_cordic_inst/sine_cordic_inst/cordic_sin_ip_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_lut_inst/rom_sin_inst_sin. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for clk_pll_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dds_lut_1_4_inst/rom_sin_1_4_inst_sin. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1868.160 ; gain = 762.941
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1868.160 ; gain = 762.941
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 840 (col length:140)
+BRAMs: 890 (col length: RAMB18 140 RAMB36 70)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port CLK in module delay_line__parameterized4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module delay_line__parameterized4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module delay_line__parameterized4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module delay_line__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module delay_line__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module delay_line__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module delay_line__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module delay_line__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module delay_line__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module delay_line__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module delay_line__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module delay_line__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module delay_line__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module delay_line is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module delay_line is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module delay_line is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[24] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[23] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[22] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[21] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[20] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[19] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[18] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[17] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[16] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[15] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[14] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[13] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[12] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[11] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[10] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[9] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[8] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[7] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[6] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[5] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[4] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[3] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[2] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[1] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D_PORT[0] in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CARRY_IN in module dsp is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module mult_gen_v12_0_21_viv is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1868.160 ; gain = 762.941
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1868.160 ; gain = 762.941
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1868.160 ; gain = 762.941
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5816] Retiming module `sine_cordic`
+	Numbers of forward move = 0, and backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `sine_cordic' done
+
+
+INFO: [Synth 8-5816] Retiming module `delay_signal__parameterized0`
+	Numbers of forward move = 0, and backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `delay_signal__parameterized0' done
+
+
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[1]_fret__17 along load instance dds_cordic_inst/i_16
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__69 along load instance dds_cordic_inst/i_0
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__69 along load instance dds_cordic_inst/i_0
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__68 along load instance dds_cordic_inst/i_0
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__68 along load instance dds_cordic_inst/i_0
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__67 along load instance dds_cordic_inst/i_0
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__67 along load instance dds_cordic_inst/i_0
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__66 along load instance dds_cordic_inst/i_0
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__66 along load instance dds_cordic_inst/i_74
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__65 along load instance dds_cordic_inst/i_1
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__65 along load instance dds_cordic_inst/i_1
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__64 along load instance dds_cordic_inst/i_1
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__64 along load instance dds_cordic_inst/i_1
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__63 along load instance dds_cordic_inst/i_1
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__63 along load instance dds_cordic_inst/i_73
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__62 along load instance dds_cordic_inst/i_1
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__62 along load instance dds_cordic_inst/i_1
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__61 along load instance dds_cordic_inst/i_2
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__61 along load instance dds_cordic_inst/i_72
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__60 along load instance dds_cordic_inst/i_2
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__60 along load instance dds_cordic_inst/i_2
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__59 along load instance dds_cordic_inst/i_2
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__59 along load instance dds_cordic_inst/i_2
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__58 along load instance dds_cordic_inst/i_2
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__58 along load instance dds_cordic_inst/i_2
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__4 along load instance dds_cordic_inst/i_16
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__38_fret along load instance dds_cordic_inst/i_19
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__42_fret along load instance dds_cordic_inst/i_19
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__44_fret along load instance dds_cordic_inst/i_19
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__48_fret along load instance dds_cordic_inst/i_19
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__54 along load instance dds_cordic_inst/i_3
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__54 along load instance dds_cordic_inst/i_71
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__55 along load instance dds_cordic_inst/i_3
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__55 along load instance dds_cordic_inst/i_3
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__56 along load instance dds_cordic_inst/i_3
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__56 along load instance dds_cordic_inst/i_70
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__57 along load instance dds_cordic_inst/i_3
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__57 along load instance dds_cordic_inst/i_3
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__37 along load instance dds_cordic_inst/i_30
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__38 along load instance dds_cordic_inst/i_30
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__39 along load instance dds_cordic_inst/i_30
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__40 along load instance dds_cordic_inst/i_30
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__41 along load instance dds_cordic_inst/i_30
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__42 along load instance dds_cordic_inst/i_30
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__43 along load instance dds_cordic_inst/i_30
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__44 along load instance dds_cordic_inst/i_30
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__38_fret__0 along load instance dds_cordic_inst/i_19
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__42_fret__0 along load instance dds_cordic_inst/i_19
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__44_fret__0 along load instance dds_cordic_inst/i_19
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__48_fret__0 along load instance dds_cordic_inst/i_19
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__14 along load instance dds_cordic_inst/i_105
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__14 along load instance dds_cordic_inst/i_259
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__15 along load instance dds_cordic_inst/i_105
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__15 along load instance dds_cordic_inst/i_259
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__18 along load instance dds_cordic_inst/i_101
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__18 along load instance dds_cordic_inst/i_257
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__19 along load instance dds_cordic_inst/i_101
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__19 along load instance dds_cordic_inst/i_257
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__20 along load instance dds_cordic_inst/i_103
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__20 along load instance dds_cordic_inst/i_258
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__21 along load instance dds_cordic_inst/i_103
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__21 along load instance dds_cordic_inst/i_258
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__46_fret along load instance dds_cordic_inst/i_18
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__50_fret along load instance dds_cordic_inst/i_18
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__52_fret along load instance dds_cordic_inst/i_18
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__56_fret along load instance dds_cordic_inst/i_18
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__45 along load instance dds_cordic_inst/i_29
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__46 along load instance dds_cordic_inst/i_29
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__47 along load instance dds_cordic_inst/i_29
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__48 along load instance dds_cordic_inst/i_29
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__49 along load instance dds_cordic_inst/i_29
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__50 along load instance dds_cordic_inst/i_29
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__51 along load instance dds_cordic_inst/i_29
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__52 along load instance dds_cordic_inst/i_29
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__46_fret__0 along load instance dds_cordic_inst/i_18
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__50_fret__0 along load instance dds_cordic_inst/i_18
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__52_fret__0 along load instance dds_cordic_inst/i_18
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__56_fret__0 along load instance dds_cordic_inst/i_18
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__54_fret along load instance dds_cordic_inst/i_17
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__58_fret along load instance dds_cordic_inst/i_17
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__60_fret along load instance dds_cordic_inst/i_17
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__64_fret along load instance dds_cordic_inst/i_17
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__53 along load instance dds_cordic_inst/i_28
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__54 along load instance dds_cordic_inst/i_28
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__55 along load instance dds_cordic_inst/i_28
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__56 along load instance dds_cordic_inst/i_28
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__57 along load instance dds_cordic_inst/i_28
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__58 along load instance dds_cordic_inst/i_28
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__59 along load instance dds_cordic_inst/i_28
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__60 along load instance dds_cordic_inst/i_28
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__54_fret__0 along load instance dds_cordic_inst/i_17
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__58_fret__0 along load instance dds_cordic_inst/i_17
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__60_fret__0 along load instance dds_cordic_inst/i_17
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__64_fret__0 along load instance dds_cordic_inst/i_17
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[1]_fret__17 along load instance dds_cordic_inst/i_16
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__62_fret along load instance dds_cordic_inst/i_16
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__66_fret along load instance dds_cordic_inst/i_16
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__68_fret along load instance dds_cordic_inst/i_16
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__61 along load instance dds_cordic_inst/i_27
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__62 along load instance dds_cordic_inst/i_27
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__63 along load instance dds_cordic_inst/i_27
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__64 along load instance dds_cordic_inst/i_27
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__65 along load instance dds_cordic_inst/i_27
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__66 along load instance dds_cordic_inst/i_27
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__67 along load instance dds_cordic_inst/i_27
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__68 along load instance dds_cordic_inst/i_27
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__62_fret__0 along load instance dds_cordic_inst/i_16
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__66_fret__0 along load instance dds_cordic_inst/i_16
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__68_fret__0 along load instance dds_cordic_inst/i_16
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__69 along load instance dds_cordic_inst/i_0
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__69 along load instance dds_cordic_inst/i_0
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__68 along load instance dds_cordic_inst/i_0
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__68 along load instance dds_cordic_inst/i_0
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__67 along load instance dds_cordic_inst/i_0
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__67 along load instance dds_cordic_inst/i_0
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__66 along load instance dds_cordic_inst/i_0
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__66 along load instance dds_cordic_inst/i_74
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__65 along load instance dds_cordic_inst/i_1
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__65 along load instance dds_cordic_inst/i_1
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__64 along load instance dds_cordic_inst/i_1
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__64 along load instance dds_cordic_inst/i_1
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__63 along load instance dds_cordic_inst/i_1
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__63 along load instance dds_cordic_inst/i_73
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__62 along load instance dds_cordic_inst/i_1
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__62 along load instance dds_cordic_inst/i_1
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__61 along load instance dds_cordic_inst/i_2
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__61 along load instance dds_cordic_inst/i_72
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__60 along load instance dds_cordic_inst/i_2
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__60 along load instance dds_cordic_inst/i_2
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__59 along load instance dds_cordic_inst/i_2
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__59 along load instance dds_cordic_inst/i_2
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__58 along load instance dds_cordic_inst/i_2
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__58 along load instance dds_cordic_inst/i_2
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__4 along load instance dds_cordic_inst/i_0
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__4 along load instance dds_cordic_inst/i_16
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__38_fret along load instance dds_cordic_inst/i_19
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__42_fret along load instance dds_cordic_inst/i_19
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__44_fret along load instance dds_cordic_inst/i_19
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__48_fret along load instance dds_cordic_inst/i_19
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__54 along load instance dds_cordic_inst/i_3
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__54 along load instance dds_cordic_inst/i_71
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__55 along load instance dds_cordic_inst/i_3
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__55 along load instance dds_cordic_inst/i_3
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__56 along load instance dds_cordic_inst/i_3
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__56 along load instance dds_cordic_inst/i_70
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__57 along load instance dds_cordic_inst/i_3
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__57 along load instance dds_cordic_inst/i_3
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__37 along load instance dds_cordic_inst/i_30
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__38 along load instance dds_cordic_inst/i_30
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__39 along load instance dds_cordic_inst/i_30
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__40 along load instance dds_cordic_inst/i_30
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__41 along load instance dds_cordic_inst/i_30
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__42 along load instance dds_cordic_inst/i_30
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__43 along load instance dds_cordic_inst/i_30
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__44 along load instance dds_cordic_inst/i_30
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__38_fret__0 along load instance dds_cordic_inst/i_19
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__42_fret__0 along load instance dds_cordic_inst/i_19
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__44_fret__0 along load instance dds_cordic_inst/i_19
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__48_fret__0 along load instance dds_cordic_inst/i_19
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__14 along load instance dds_cordic_inst/i_105
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__14 along load instance dds_cordic_inst/i_259
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__15 along load instance dds_cordic_inst/i_105
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__15 along load instance dds_cordic_inst/i_259
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__18 along load instance dds_cordic_inst/i_101
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__18 along load instance dds_cordic_inst/i_257
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__19 along load instance dds_cordic_inst/i_101
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__19 along load instance dds_cordic_inst/i_257
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__20 along load instance dds_cordic_inst/i_103
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__20 along load instance dds_cordic_inst/i_258
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__21 along load instance dds_cordic_inst/i_103
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__21 along load instance dds_cordic_inst/i_258
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__46_fret along load instance dds_cordic_inst/i_18
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__50_fret along load instance dds_cordic_inst/i_18
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__52_fret along load instance dds_cordic_inst/i_18
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__56_fret along load instance dds_cordic_inst/i_18
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__45 along load instance dds_cordic_inst/i_29
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__46 along load instance dds_cordic_inst/i_29
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__47 along load instance dds_cordic_inst/i_29
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__48 along load instance dds_cordic_inst/i_29
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__49 along load instance dds_cordic_inst/i_29
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__50 along load instance dds_cordic_inst/i_29
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__51 along load instance dds_cordic_inst/i_29
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__52 along load instance dds_cordic_inst/i_29
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__46_fret__0 along load instance dds_cordic_inst/i_18
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__50_fret__0 along load instance dds_cordic_inst/i_18
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__52_fret__0 along load instance dds_cordic_inst/i_18
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__56_fret__0 along load instance dds_cordic_inst/i_18
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__54_fret along load instance dds_cordic_inst/i_17
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__58_fret along load instance dds_cordic_inst/i_17
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__60_fret along load instance dds_cordic_inst/i_17
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__64_fret along load instance dds_cordic_inst/i_17
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__53 along load instance dds_cordic_inst/i_28
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__54 along load instance dds_cordic_inst/i_28
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__55 along load instance dds_cordic_inst/i_28
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__56 along load instance dds_cordic_inst/i_28
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__57 along load instance dds_cordic_inst/i_28
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__58 along load instance dds_cordic_inst/i_28
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__59 along load instance dds_cordic_inst/i_28
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__60 along load instance dds_cordic_inst/i_28
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__54_fret__0 along load instance dds_cordic_inst/i_17
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__58_fret__0 along load instance dds_cordic_inst/i_17
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__60_fret__0 along load instance dds_cordic_inst/i_17
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__64_fret__0 along load instance dds_cordic_inst/i_17
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[1]_fret__17 along load instance dds_cordic_inst/i_16
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__62_fret along load instance dds_cordic_inst/i_16
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__66_fret along load instance dds_cordic_inst/i_16
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__68_fret along load instance dds_cordic_inst/i_16
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__61 along load instance dds_cordic_inst/i_27
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__62 along load instance dds_cordic_inst/i_27
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__63 along load instance dds_cordic_inst/i_27
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__64 along load instance dds_cordic_inst/i_27
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__65 along load instance dds_cordic_inst/i_27
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__66 along load instance dds_cordic_inst/i_27
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__67 along load instance dds_cordic_inst/i_27
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__68 along load instance dds_cordic_inst/i_27
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__62_fret__0 along load instance dds_cordic_inst/i_16
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__66_fret__0 along load instance dds_cordic_inst/i_16
+RETIMING: forward move fails for register dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__68_fret__0 along load instance dds_cordic_inst/i_16
+INFO: [Synth 8-5816] Retiming module `dds_cordic`
+	Numbers of forward move = 41, and backward move = 21
+
+	Retimed registers names:
+		dds_cordic_inst/dout_symbol_reg_bret
+		dds_cordic_inst/dout_symbol_reg_bret__0
+		dds_cordic_inst/dout_symbol_reg_bret__1
+		dds_cordic_inst/dout_symbol_reg_bret__2
+		dds_cordic_inst/dout_symbol_reg_bret__3
+		dds_cordic_inst/phase_accum_reg[17]_fret
+		dds_cordic_inst/phase_accum_reg[17]_fret__0
+		dds_cordic_inst/phase_accum_reg[17]_fret__1
+		dds_cordic_inst/phase_accum_reg[17]_fret__10
+		dds_cordic_inst/phase_accum_reg[17]_fret__11
+		dds_cordic_inst/phase_accum_reg[17]_fret__12
+		dds_cordic_inst/phase_accum_reg[17]_fret__13
+		dds_cordic_inst/phase_accum_reg[17]_fret__14
+		dds_cordic_inst/phase_accum_reg[17]_fret__17
+		dds_cordic_inst/phase_accum_reg[17]_fret__18
+		dds_cordic_inst/phase_accum_reg[17]_fret__2
+		dds_cordic_inst/phase_accum_reg[17]_fret__3
+		dds_cordic_inst/phase_accum_reg[17]_fret__4
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__0
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__1
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__10
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__11
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__12
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__13
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__14
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__15
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__16
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__17
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__18
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__19
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__2
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__20
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__21
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__22
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__22_fret
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__22_fret__0
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__23
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__24
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__24_fret
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__24_fret__0
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__25
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__26
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__26_fret
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__26_fret__0
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__27
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__28
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__28_fret
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__28_fret__0
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__29
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__3
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__30
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__30_fret
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__30_fret__0
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__31
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__32
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__32_fret
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__32_fret__0
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__33
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__34
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__34_fret
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__34_fret__0
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__35
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__36
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__36_fret
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__36_fret__0
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__37
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__38
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__38_fret
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__38_fret__0
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__39
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__4
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__40
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__40_fret
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__40_fret__0
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__41
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__42
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__42_fret
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__42_fret__0
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__43
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__44
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__44_fret
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__44_fret__0
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__45
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__46
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__46_fret
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__46_fret__0
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__47
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__48
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__48_fret
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__48_fret__0
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__49
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__5
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__50
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__50_fret
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__50_fret__0
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__51
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__52
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__52_fret
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__52_fret__0
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__53
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__54
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__54_fret
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__54_fret__0
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__55
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__56
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__56_fret
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__56_fret__0
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__57
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__58
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__58_fret
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__58_fret__0
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__59
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__6
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__60
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__60_fret
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__60_fret__0
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__61
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__62
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__62_fret
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__62_fret__0
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__63
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__64
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__64_fret
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__64_fret__0
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__65
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__66
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__66_fret
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__66_fret__0
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__67
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__68
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__68_fret
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__68_fret__0
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__69
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__7
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__8
+		dds_cordic_inst/phase_accum_reg[17]_fret__47_fret__9
+		dds_cordic_inst/phase_accum_reg[17]_fret__5
+		dds_cordic_inst/phase_accum_reg[17]_fret__6
+		dds_cordic_inst/phase_accum_reg[17]_fret__7
+		dds_cordic_inst/phase_accum_reg[17]_fret__8
+		dds_cordic_inst/phase_accum_reg[17]_fret__9
+		dds_cordic_inst/phase_accum_reg[1]_fret__17
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__0
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__1
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__2
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__3
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__4
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__4_bret
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__4_bret__0
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__4_bret__1
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__4_bret__10
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__4_bret__11
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__4_bret__12
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__4_bret__13
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__4_bret__14
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__4_bret__15
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__4_bret__16
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__4_bret__17
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__4_bret__18
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__4_bret__19
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__4_bret__2
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__4_bret__20
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__4_bret__21
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__4_bret__22
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__4_bret__23
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__4_bret__24
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__4_bret__25
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__4_bret__26
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__4_bret__27
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__4_bret__28
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__4_bret__29
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__4_bret__3
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__4_bret__30
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__4_bret__31
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__4_bret__32
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__4_bret__33
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__4_bret__34
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__4_bret__35
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__4_bret__36
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__4_bret__37
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__4_bret__38
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__4_bret__39
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__4_bret__4
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__4_bret__40
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__4_bret__41
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__4_bret__42
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__4_bret__43
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__4_bret__44
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__4_bret__45
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__4_bret__46
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__4_bret__47
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__4_bret__48
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__4_bret__49
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__4_bret__5
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__4_bret__50
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__4_bret__51
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__4_bret__52
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__4_bret__53
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__4_bret__54
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__4_bret__55
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__4_bret__56
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__4_bret__57
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__4_bret__58
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__4_bret__59
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__4_bret__6
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__4_bret__60
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__4_bret__61
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__4_bret__62
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__4_bret__63
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__4_bret__7
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__4_bret__8
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__4_bret__9
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__0
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__1
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__10
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__11
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__12
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__13
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__14
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__15
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__16
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__17
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__18
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__19
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__2
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__20
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__21
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__22
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__23
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__24
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__25
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__26
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__27
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__28
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__29
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__3
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__30
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__31
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__32
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__33
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__34
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__35
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__36
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__37
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__38
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__39
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__4
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__40
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__41
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__42
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__43
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__44
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__45
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__46
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__47
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__48
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__49
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__5
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__50
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__51
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__52
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__53
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__54
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__55
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__56
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__57
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__58
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__59
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__6
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__60
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__61
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__62
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__63
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__64
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__65
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__66
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__67
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__68
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__7
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__8
+		dds_cordic_inst/phase_accum_reg[1]_fret__17_fret__5_bret__9
+		dds_cordic_inst/phase_accum_reg[1]_fret__18
+		dds_cordic_inst/phase_input_reg[0]_C_bret
+		dds_cordic_inst/phase_input_reg[0]_C_bret__0
+		dds_cordic_inst/phase_input_reg[0]_C_bret__1
+		dds_cordic_inst/phase_input_reg[10]_C_bret
+		dds_cordic_inst/phase_input_reg[10]_C_bret__0
+		dds_cordic_inst/phase_input_reg[10]_C_bret__1
+		dds_cordic_inst/phase_input_reg[11]_C_bret
+		dds_cordic_inst/phase_input_reg[11]_C_bret__0
+		dds_cordic_inst/phase_input_reg[11]_C_bret__1
+		dds_cordic_inst/phase_input_reg[12]_C_bret
+		dds_cordic_inst/phase_input_reg[12]_C_bret__0
+		dds_cordic_inst/phase_input_reg[12]_C_bret__1
+		dds_cordic_inst/phase_input_reg[13]_C_bret
+		dds_cordic_inst/phase_input_reg[13]_C_bret__0
+		dds_cordic_inst/phase_input_reg[13]_C_bret__1
+		dds_cordic_inst/phase_input_reg[14]_C_bret
+		dds_cordic_inst/phase_input_reg[14]_C_bret__0
+		dds_cordic_inst/phase_input_reg[14]_C_bret__1
+		dds_cordic_inst/phase_input_reg[14]_C_bret__2
+		dds_cordic_inst/phase_input_reg[14]_C_bret__3
+		dds_cordic_inst/phase_input_reg[15]_C_bret
+		dds_cordic_inst/phase_input_reg[15]_C_bret__0
+		dds_cordic_inst/phase_input_reg[15]_C_bret__1
+		dds_cordic_inst/phase_input_reg[16]_C_bret
+		dds_cordic_inst/phase_input_reg[16]_C_bret__0
+		dds_cordic_inst/phase_input_reg[16]_C_bret__1
+		dds_cordic_inst/phase_input_reg[17]_C_bret
+		dds_cordic_inst/phase_input_reg[17]_C_bret__0
+		dds_cordic_inst/phase_input_reg[17]_C_bret__1
+		dds_cordic_inst/phase_input_reg[1]_C_bret
+		dds_cordic_inst/phase_input_reg[1]_C_bret__0
+		dds_cordic_inst/phase_input_reg[1]_C_bret__1
+		dds_cordic_inst/phase_input_reg[2]_C_bret
+		dds_cordic_inst/phase_input_reg[2]_C_bret__0
+		dds_cordic_inst/phase_input_reg[2]_C_bret__1
+		dds_cordic_inst/phase_input_reg[3]_C_bret
+		dds_cordic_inst/phase_input_reg[3]_C_bret__0
+		dds_cordic_inst/phase_input_reg[3]_C_bret__1
+		dds_cordic_inst/phase_input_reg[4]_C_bret
+		dds_cordic_inst/phase_input_reg[4]_C_bret__0
+		dds_cordic_inst/phase_input_reg[4]_C_bret__1
+		dds_cordic_inst/phase_input_reg[5]_C_bret
+		dds_cordic_inst/phase_input_reg[5]_C_bret__0
+		dds_cordic_inst/phase_input_reg[5]_C_bret__1
+		dds_cordic_inst/phase_input_reg[6]_C_bret
+		dds_cordic_inst/phase_input_reg[6]_C_bret__0
+		dds_cordic_inst/phase_input_reg[6]_C_bret__1
+		dds_cordic_inst/phase_input_reg[7]_C_bret
+		dds_cordic_inst/phase_input_reg[7]_C_bret__0
+		dds_cordic_inst/phase_input_reg[7]_C_bret__1
+		dds_cordic_inst/phase_input_reg[8]_C_bret
+		dds_cordic_inst/phase_input_reg[8]_C_bret__0
+		dds_cordic_inst/phase_input_reg[8]_C_bret__1
+		dds_cordic_inst/phase_input_reg[9]_C_bret
+		dds_cordic_inst/phase_input_reg[9]_C_bret__0
+		dds_cordic_inst/phase_input_reg[9]_C_bret__1
+ 
+
+INFO: [Synth 8-5816] Retiming module `dds_cordic' done
+
+
+WARNING: [Synth 8-3332] Sequential element (phase_input_reg[17]_C) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_input_reg[16]_C) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_input_reg[15]_C) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_input_reg[14]_C) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_input_reg[13]_C) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_input_reg[12]_C) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_input_reg[11]_C) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_input_reg[10]_C) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_input_reg[9]_C) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_input_reg[8]_C) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_input_reg[7]_C) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_input_reg[6]_C) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_input_reg[5]_C) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_input_reg[4]_C) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_input_reg[3]_C) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_input_reg[2]_C) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_input_reg[1]_C) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_input_reg[0]_C) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[17]_fret__31_fret) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[17]_fret__35_fret) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[17]_fret__37_fret) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[17]_fret__41_fret) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[17]_fret__39_fret) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[17]_fret__43_fret) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[17]_fret__45_fret) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[17]_fret__49_fret) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[17]_fret__47_fret) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[17]_fret__51_fret) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[17]_fret__53_fret) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[17]_fret__57_fret) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[1]_fret) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[1]_fret__0) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[1]_fret__1) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[1]_fret__2) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[1]_fret__3) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[1]_fret__4) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[1]_fret__5) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[1]_fret__6) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[1]_fret__7) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[1]_fret__8) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[1]_fret__9) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[1]_fret__10) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[1]_fret__11) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[1]_fret__12) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[1]_fret__13) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[1]_fret__14) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[1]_fret__15) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[1]_fret__16) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[17]_fret__15) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[17]_fret__16) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[17]_fret__19) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[17]_fret__20) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[17]_fret__21) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[17]_fret__22) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[17]_fret__23) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[17]_fret__24) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[17]_fret__25) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[17]_fret__26) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[17]_fret__27) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[17]_fret__28) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[17]_fret__29) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[17]_fret__30) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[17]_fret__31) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[17]_fret__32) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[17]_fret__33) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[17]_fret__34) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[17]_fret__35) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[17]_fret__36) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[17]_fret__37) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[17]_fret__38) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[17]_fret__39) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[17]_fret__40) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[17]_fret__41) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[17]_fret__42) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[17]_fret__43) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[17]_fret__44) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[17]_fret__45) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[17]_fret__46) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[17]_fret__47) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[17]_fret__48) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[17]_fret__49) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[17]_fret__50) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[17]_fret__51) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[17]_fret__52) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[17]_fret__53) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[17]_fret__54) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[17]_fret__55) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[17]_fret__56) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[17]_fret__57) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[17]_fret__58) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[17]_fret__59) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[17]_fret__60) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[17]_fret__61) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[17]_fret__62) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[1]_fret__17_fret__4__0) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[1]_fret__17_fret__5) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[17]_fret__31_fret__0) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[17]_fret__35_fret__0) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[17]_fret__37_fret__0) is unused and will be removed from module dds_cordic.
+WARNING: [Synth 8-3332] Sequential element (phase_accum_reg[17]_fret__41_fret__0) is unused and will be removed from module dds_cordic.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-5816] Retiming module `dds_lut`
+	Numbers of forward move = 0, and backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `dds_lut' done
+
+
+INFO: [Synth 8-5816] Retiming module `dds_lut_1_4`
+	Numbers of forward move = 0, and backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `dds_lut_1_4' done
+
+
+INFO: [Synth 8-5816] Retiming module `sine_top`
+	Numbers of forward move = 0, and backward move = 0
+
+
+INFO: [Synth 8-5816] Retiming module `sine_top' done
+
+
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1868.160 ; gain = 762.941
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 1868.160 ; gain = 762.941
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 1868.160 ; gain = 762.941
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 1868.160 ; gain = 762.941
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |clk_pll       |         1|
+|2     |cordic_sin_ip |         1|
+|3     |rom_sin       |         1|
+|4     |rom_sin_1_4   |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+--------------+------+
+|      |Cell          |Count |
++------+--------------+------+
+|1     |clk_pll       |     1|
+|2     |cordic_sin_ip |     1|
+|3     |rom_sin       |     1|
+|4     |rom_sin_1     |     1|
+|5     |CARRY4        |    93|
+|6     |LUT1          |    50|
+|7     |LUT2          |   271|
+|8     |LUT3          |    30|
+|9     |LUT4          |    43|
+|10    |LUT5          |    27|
+|11    |LUT6          |    19|
+|12    |FDCE          |   412|
+|13    |FDPE          |   112|
+|14    |FDRE          |     5|
+|15    |LDC           |    18|
+|16    |IBUF          |     2|
+|17    |OBUF          |    36|
++------+--------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 1868.160 ; gain = 762.941
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 170 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:30 . Memory (MB): peak = 1868.160 ; gain = 665.461
+Synthesis Optimization Complete : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 1868.160 ; gain = 762.941
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1868.160 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 111 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1868.160 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 18 instances were transformed.
+  LDC => LDCE: 18 instances
+
+Synth Design complete | Checksum: ca707d50
+INFO: [Common 17-83] Releasing license: Synthesis
+79 Infos, 203 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 1868.160 ; gain = 1224.191
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1868.160 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.runs/synth_1/sine_top.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file sine_top_utilization_synth.rpt -pb sine_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Dec  2 21:51:37 2024...

@@ -1,0 +1,11 @@
+0.7
+2020.2
+May 22 2024
+19:03:11
+E:/SineCalculate/2.Firmware/dds_lut/dds_lut.gen/sources_1/ip/clk_pll/clk_pll.v,1731636866,verilog,,E:/SineCalculate/2.Firmware/dds_lut/dds_lut.srcs/sources_1/new/dds_lut.v,,clk_pll,,,../../../../dds_lut.ip_user_files/ipstatic,,,,,
+E:/SineCalculate/2.Firmware/dds_lut/dds_lut.gen/sources_1/ip/clk_pll/clk_pll_clk_wiz.v,1731636866,verilog,,E:/SineCalculate/2.Firmware/dds_lut/dds_lut.gen/sources_1/ip/clk_pll/clk_pll.v,,clk_pll_clk_wiz,,,../../../../dds_lut.ip_user_files/ipstatic,,,,,
+E:/SineCalculate/2.Firmware/dds_lut/dds_lut.gen/sources_1/ip/rom_sin_1_4/sim/rom_sin_1_4.v,1731638466,verilog,,E:/SineCalculate/2.Firmware/dds_lut/dds_lut.gen/sources_1/ip/clk_pll/clk_pll_clk_wiz.v,,rom_sin_1_4,,,../../../../dds_lut.ip_user_files/ipstatic,,,,,
+E:/SineCalculate/2.Firmware/dds_lut/dds_lut.sim/sim_1/behav/xsim/glbl.v,1708598507,verilog,,,,glbl,,,,,,,,
+E:/SineCalculate/2.Firmware/dds_lut/dds_lut.srcs/sim_1/new/dds_lut_tb.v,1731637930,verilog,,,,dds_lut_tb,,,../../../../dds_lut.ip_user_files/ipstatic,,,,,
+E:/SineCalculate/2.Firmware/dds_lut/dds_lut.srcs/sources_1/new/dds_lut.v,1731641249,verilog,,E:/SineCalculate/2.Firmware/dds_lut/dds_lut.srcs/sources_1/new/dds_lut_top.v,,dds_lut,,,../../../../dds_lut.ip_user_files/ipstatic,,,,,
+E:/SineCalculate/2.Firmware/dds_lut/dds_lut.srcs/sources_1/new/dds_lut_top.v,1731638233,verilog,,E:/SineCalculate/2.Firmware/dds_lut/dds_lut.srcs/sim_1/new/dds_lut_tb.v,,dds_lut_top,,,../../../../dds_lut.ip_user_files/ipstatic,,,,,

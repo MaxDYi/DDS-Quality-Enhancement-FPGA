@@ -1,0 +1,14 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../dds_lut.ip_user_files/ipstatic" \
+"../../../../dds_lut.gen/sources_1/ip/rom_sin_1_4/sim/rom_sin_1_4.v" \
+"../../../../dds_lut.gen/sources_1/ip/clk_pll/clk_pll_clk_wiz.v" \
+"../../../../dds_lut.gen/sources_1/ip/clk_pll/clk_pll.v" \
+"../../../../dds_lut.srcs/sources_1/new/dds_lut.v" \
+"../../../../dds_lut.srcs/sources_1/new/dds_lut_top.v" \
+"../../../../dds_lut.srcs/sim_1/new/dds_lut_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

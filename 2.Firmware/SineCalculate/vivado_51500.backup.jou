@@ -1,0 +1,162 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Mon Nov 11 21:37:43 2024
+# Process ID: 51500
+# Current directory: E:/SineCalculate/2.Firmware/SineCalculate
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent45608 E:\SineCalculate\2.Firmware\SineCalculate\SineCalculate.xpr
+# Log file: E:/SineCalculate/2.Firmware/SineCalculate/vivado.log
+# Journal file: E:/SineCalculate/2.Firmware/SineCalculate\vivado.jou
+# Running On        :Desktop-NUC
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :26100
+# Processor Detail  :12th Gen Intel(R) Core(TM) i5-1240P
+# CPU Frequency     :2112 MHz
+# CPU Physical cores:12
+# CPU Logical cores :16
+# Host memory       :33911 MB
+# Swap memory       :6154 MB
+# Total Virtual     :40066 MB
+# Available Virtual :10638 MB
+#-----------------------------------------------------------
+start_gui
+open_project E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.xpr
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+export_ip_user_files -of_objects  [get_files E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.srcs/sources_1/new/dac.v] -no_script -reset -force -quiet
+remove_files  E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.srcs/sources_1/new/dac.v
+file delete -force E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.srcs/sources_1/new/dac.v
+export_ip_user_files -of_objects  [get_files E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.srcs/sources_1/new/ad9777.v] -no_script -reset -force -quiet
+remove_files  E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.srcs/sources_1/new/ad9777.v
+file delete -force E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.srcs/sources_1/new/ad9777.v
+export_ip_user_files -of_objects  [get_files E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.srcs/sources_1/new/spi_master.v] -no_script -reset -force -quiet
+remove_files  E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.srcs/sources_1/new/spi_master.v
+file delete -force E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.srcs/sources_1/new/spi_master.v
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+launch_simulation
+source sine_top_tb.tcl
+restart
+run all
+run all
+current_wave_config {Untitled 1}
+add_wave {{/sine_top_tb/sine_top_inst/dds_taylor_inst/dds_out}} 
+current_wave_config {Untitled 1}
+add_wave {{/sine_top_tb/sine_top_inst/dds_taylor_inst/clk}} {{/sine_top_tb/sine_top_inst/dds_taylor_inst/rstn}} {{/sine_top_tb/sine_top_inst/dds_taylor_inst/phase_step}} {{/sine_top_tb/sine_top_inst/dds_taylor_inst/dds_out}} {{/sine_top_tb/sine_top_inst/dds_taylor_inst/dout_symbol}} {{/sine_top_tb/sine_top_inst/dds_taylor_inst/dout_symbol_next}} {{/sine_top_tb/sine_top_inst/dds_taylor_inst/busy}} {{/sine_top_tb/sine_top_inst/dds_taylor_inst/dout}} {{/sine_top_tb/sine_top_inst/dds_taylor_inst/phase_accum_add}} {{/sine_top_tb/sine_top_inst/dds_taylor_inst/phase_accum_next}} {{/sine_top_tb/sine_top_inst/dds_taylor_inst/phase_accum_last}} {{/sine_top_tb/sine_top_inst/dds_taylor_inst/phase_tvalid}} {{/sine_top_tb/sine_top_inst/dds_taylor_inst/phase_tdata}} {{/sine_top_tb/sine_top_inst/dds_taylor_inst/phase_accum}} {{/sine_top_tb/sine_top_inst/dds_taylor_inst/dout_tvalid}} {{/sine_top_tb/sine_top_inst/dds_taylor_inst/PI_2_VALUE}} {{/sine_top_tb/sine_top_inst/dds_taylor_inst/PI_3_2_VALUE}} {{/sine_top_tb/sine_top_inst/dds_taylor_inst/PI_1_VALUE}} {{/sine_top_tb/sine_top_inst/dds_taylor_inst/PI_1_2_VALUE}} 
+restart
+run all
+run all
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+close_sim
+launch_simulation
+source sine_top_tb.tcl
+current_wave_config {Untitled 2}
+add_wave {{/sine_top_tb/sine_top_inst/dds_taylor_inst/clk}} {{/sine_top_tb/sine_top_inst/dds_taylor_inst/rstn}} {{/sine_top_tb/sine_top_inst/dds_taylor_inst/phase_step}} {{/sine_top_tb/sine_top_inst/dds_taylor_inst/dds_out}} {{/sine_top_tb/sine_top_inst/dds_taylor_inst/dout_symbol}} {{/sine_top_tb/sine_top_inst/dds_taylor_inst/dout_symbol_next}} {{/sine_top_tb/sine_top_inst/dds_taylor_inst/busy}} {{/sine_top_tb/sine_top_inst/dds_taylor_inst/dout}} {{/sine_top_tb/sine_top_inst/dds_taylor_inst/phase_accum_add}} {{/sine_top_tb/sine_top_inst/dds_taylor_inst/phase_accum_next}} {{/sine_top_tb/sine_top_inst/dds_taylor_inst/phase_accum_last}} {{/sine_top_tb/sine_top_inst/dds_taylor_inst/phase_tvalid}} {{/sine_top_tb/sine_top_inst/dds_taylor_inst/phase_tdata}} {{/sine_top_tb/sine_top_inst/dds_taylor_inst/phase_accum}} {{/sine_top_tb/sine_top_inst/dds_taylor_inst/dout_tvalid}} {{/sine_top_tb/sine_top_inst/dds_taylor_inst/PI_2_VALUE}} {{/sine_top_tb/sine_top_inst/dds_taylor_inst/PI_3_2_VALUE}} {{/sine_top_tb/sine_top_inst/dds_taylor_inst/PI_1_VALUE}} {{/sine_top_tb/sine_top_inst/dds_taylor_inst/PI_1_2_VALUE}} 
+restart
+run all
+run all
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+close_sim
+launch_simulation
+source sine_top_tb.tcl
+current_wave_config {Untitled 3}
+add_wave {{/sine_top_tb/dac_ch0}} {{/sine_top_tb/dac_ch1}} {{/sine_top_tb/dac_ch2}} 
+current_wave_config {Untitled 3}
+add_wave {{/sine_top_tb/sine_top_inst/dds_taylor_inst/dds_out}} 
+restart
+run all
+run all
+current_wave_config {Untitled 3}
+add_wave {{/sine_top_tb/sine_top_inst/dac_ch0}} 
+close_sim
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.runs/impl_1/sine_top.bit} [get_hw_devices xc7k325t_0]
+current_hw_device [get_hw_devices xc7k325t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7k325t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7k325t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7k325t_0]
+set_property PROGRAM.FILE {E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.runs/impl_1/sine_top.bit} [get_hw_devices xc7k325t_0]
+program_hw_devices [get_hw_devices xc7k325t_0]
+refresh_hw_device [lindex [get_hw_devices xc7k325t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -jobs 12
+wait_on_run impl_1
+open_run impl_1
+set_property -dict [list \
+  CONFIG.CLKOUT5_JITTER {178.053} \
+  CONFIG.CLKOUT5_REQUESTED_OUT_FREQ {10.000} \
+  CONFIG.CLKOUT6_JITTER {178.053} \
+  CONFIG.CLKOUT6_REQUESTED_OUT_FREQ {10.000} \
+  CONFIG.MMCM_CLKOUT4_DIVIDE {100} \
+  CONFIG.MMCM_CLKOUT5_DIVIDE {100} \
+] [get_ips clk_pll]
+generate_target all [get_files  E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.srcs/sources_1/ip/clk_pll/clk_pll.xci]
+catch { config_ip_cache -export [get_ips -all clk_pll] }
+export_ip_user_files -of_objects [get_files E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.srcs/sources_1/ip/clk_pll/clk_pll.xci] -no_script -sync -force -quiet
+reset_run clk_pll_synth_1
+launch_runs clk_pll_synth_1 -jobs 12
+wait_on_run clk_pll_synth_1
+export_simulation -of_objects [get_files E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.srcs/sources_1/ip/clk_pll/clk_pll.xci] -directory E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.ip_user_files/sim_scripts -ip_user_files_dir E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.ip_user_files -ipstatic_source_dir E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.ip_user_files/ipstatic -lib_map_path [list {modelsim=E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.cache/compile_simlib/modelsim} {questa=E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.cache/compile_simlib/questa} {riviera=E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.cache/compile_simlib/riviera} {activehdl=E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -jobs 12
+wait_on_run impl_1
+launch_simulation
+set_property -dict [list \
+  CONFIG.CLKOUT1_JITTER {136.686} \
+  CONFIG.CLKOUT1_PHASE_ERROR {105.461} \
+  CONFIG.CLKOUT2_JITTER {188.136} \
+  CONFIG.CLKOUT2_PHASE_ERROR {105.461} \
+  CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {20.000} \
+  CONFIG.CLKOUT3_JITTER {180.172} \
+  CONFIG.CLKOUT3_PHASE_ERROR {105.461} \
+  CONFIG.CLKOUT4_JITTER {157.199} \
+  CONFIG.CLKOUT4_PHASE_ERROR {105.461} \
+  CONFIG.CLKOUT5_JITTER {215.046} \
+  CONFIG.CLKOUT5_PHASE_ERROR {105.461} \
+  CONFIG.CLKOUT6_JITTER {215.046} \
+  CONFIG.CLKOUT6_PHASE_ERROR {105.461} \
+  CONFIG.CLK_OUT2_PORT {clk_out_20} \
+  CONFIG.MMCM_CLKFBOUT_MULT_F {9} \
+  CONFIG.MMCM_CLKOUT0_DIVIDE_F {9} \
+  CONFIG.MMCM_CLKOUT1_DIVIDE {45} \
+  CONFIG.MMCM_CLKOUT2_DIVIDE {36} \
+  CONFIG.MMCM_CLKOUT3_DIVIDE {18} \
+  CONFIG.MMCM_CLKOUT4_DIVIDE {90} \
+  CONFIG.MMCM_CLKOUT5_DIVIDE {90} \
+  CONFIG.MMCM_DIVCLK_DIVIDE {2} \
+] [get_ips clk_pll]
+generate_target all [get_files  E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.srcs/sources_1/ip/clk_pll/clk_pll.xci]
+catch { config_ip_cache -export [get_ips -all clk_pll] }
+export_ip_user_files -of_objects [get_files E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.srcs/sources_1/ip/clk_pll/clk_pll.xci] -no_script -sync -force -quiet
+reset_run clk_pll_synth_1
+launch_runs clk_pll_synth_1 -jobs 12
+wait_on_run clk_pll_synth_1
+export_simulation -of_objects [get_files E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.srcs/sources_1/ip/clk_pll/clk_pll.xci] -directory E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.ip_user_files/sim_scripts -ip_user_files_dir E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.ip_user_files -ipstatic_source_dir E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.ip_user_files/ipstatic -lib_map_path [list {modelsim=E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.cache/compile_simlib/modelsim} {questa=E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.cache/compile_simlib/questa} {riviera=E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.cache/compile_simlib/riviera} {activehdl=E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -jobs 12
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7k325t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7k325t_0]
+set_property PROGRAM.FILE {E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.runs/impl_1/sine_top.bit} [get_hw_devices xc7k325t_0]
+program_hw_devices [get_hw_devices xc7k325t_0]
+refresh_hw_device [lindex [get_hw_devices xc7k325t_0] 0]

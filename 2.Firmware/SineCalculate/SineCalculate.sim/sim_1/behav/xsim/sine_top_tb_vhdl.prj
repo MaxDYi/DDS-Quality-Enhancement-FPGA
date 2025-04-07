@@ -1,0 +1,9 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../SineCalculate.gen/sources_1/ip/mult_u64xu64/sim/mult_u64xu64.vhd" \
+"../../../../SineCalculate.gen/sources_1/ip/mult_u18xu18/sim/mult_u18xu18.vhd" \
+"../../../../SineCalculate.gen/sources_1/ip/cordic_sin_ip/sim/cordic_sin_ip.vhd" \
+"../../../../SineCalculate.gen/sources_1/ip/cordic_sin_ip/demo_tb/tb_cordic_sin_ip.vhd" \
+
+# Do not sort compile order
+nosort

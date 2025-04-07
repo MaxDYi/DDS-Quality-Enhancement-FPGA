@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Mon Dec  2 21:50:42 2024
+# Process ID: 30120
+# Current directory: E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.runs/synth_1
+# Command line: vivado.exe -log sine_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source sine_top.tcl
+# Log file: E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.runs/synth_1/sine_top.vds
+# Journal file: E:/SineCalculate/2.Firmware/SineCalculate/SineCalculate.runs/synth_1\vivado.jou
+# Running On        :Desktop-NUC
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :26100
+# Processor Detail  :12th Gen Intel(R) Core(TM) i5-1240P
+# CPU Frequency     :2112 MHz
+# CPU Physical cores:12
+# CPU Logical cores :16
+# Host memory       :33911 MB
+# Swap memory       :10200 MB
+# Total Virtual     :44112 MB
+# Available Virtual :14288 MB
+#-----------------------------------------------------------
+source sine_top.tcl -notrace

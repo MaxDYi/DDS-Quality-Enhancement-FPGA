@@ -1,0 +1,5 @@
+vhdl xil_defaultlib  \
+"../../../../SineCalculate.gen/sources_1/ip/mult_u64xu64/sim/mult_u64xu64.vhd" \
+
+# Do not sort compile order
+nosort
