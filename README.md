@@ -8,7 +8,6 @@ This project is focused on enhancing DDS signal quality using a novel direct cal
 - **Firmware**: This folder contains the FPGA firmware, which has been programmed and compiled for the FPGA.
 - **Docs**: This folder includes the schematic diagrams, device manuals, IP core tutorials, and other related documentation.
 - **Data**: This folder contains the experimental data used during the research.
-- **Paper**: The research paper and related findings are located here.
 
 ## Overview
 
@@ -20,7 +19,6 @@ This repository provides the resources necessary to replicate and extend the res
 2. **FPGA Firmware**: The FPGA firmware can be found in the "Firmware" directory. Instructions on how to burn the firmware to the FPGA are included in the documentation.
 3. **Documentation**: The "Docs" folder contains detailed resources, including schematics, device manuals, and IP core tutorials to help you understand the hardware and its implementation.
 4. **Experimental Data**: The "Data" folder contains the results from the experiments conducted during the research, which can be analyzed to validate the proposed method.
-5. **Research Paper**: Detailed research findings can be found in the "Paper" folder. The paper describes the theoretical background, experimental setup, and results in detail.
 
 ## License
 
